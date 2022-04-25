@@ -1,0 +1,21 @@
+{
+	"name": "@k9/test",
+	"nameZH": "中文",
+	"version": "1.0.2",
+	"description": "测试",
+	"main": "lib/install.js",
+	"module": "es/install.js",
+	"scripts": {
+		"build": "terra-cli build --type only",
+		"prepublishOnly": "terra-cli build",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "chenxi.git"
+	},
+	"author": "晨曦",
+	"license": "ISC",
+	"componentType": "FUNC",
+	"department": "@k9"
+}
