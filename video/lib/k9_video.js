@@ -5401,10 +5401,10 @@ var __vue_staticRenderFns__ = [];
         };
       }
     },
-    isShowNotWifi: {
-      type: Boolean,
-      "default": false
-    },
+    // isShowNotWifi: {
+    //   type: Boolean,
+    //   default: false,
+    // },
     clickId: {
       type: Number,
       "default": 1
@@ -5436,9 +5436,8 @@ var __vue_staticRenderFns__ = [];
   },
   data: function data() {
     return {
-      isShowFlag: this.isShowNotWifi,
-      networkType: 1,
-      // 1 wifi 2 移动
+      // isShowFlag: this.isShowNotWifi,
+      // networkType: 1, // 1 wifi 2 移动
       isFirstIn: false,
       // 是否第一次进入。展示蒙层，播放按钮
       hasSetPointTimer: false,
@@ -5463,9 +5462,9 @@ var __vue_staticRenderFns__ = [];
     }
   },
   mounted: function mounted() {
-    var _this = this;
+    var _this = this; // this.getNetWorkStatus();
 
-    this.getNetWorkStatus();
+
     this.videoDom = this.$refs.replyVideo;
     this.videoDom.addEventListener("loadedmetadata", function () {
       // console.log('on loaded meta data... ...')
@@ -5508,17 +5507,16 @@ var __vue_staticRenderFns__ = [];
     /**
      * @description: App获取网络状态
      */
-    getNetWorkStatus: function getNetWorkStatus() {
-      if (window.xesApp) {
-        this.networkType = window.xesApp.getNetWorkStatus();
-        console.log("当前网络环境为", this.networkType);
-      }
-    },
+    // getNetWorkStatus() {
+    //   if (window.xesApp) {
+    //     this.networkType = window.xesApp.getNetWorkStatus();
+    //     console.log("当前网络环境为", this.networkType);
+    //   }
+    // },
     playVideo: function playVideo() {
-      if (this.networkType === 2 && this.isShowFlag) {
-        return false;
-      }
-
+      // if (this.networkType === 2 && this.isShowFlag) {
+      //   return false;
+      // }
       this.$refs.replyVideo.play();
       this.$emit("clickMsg", {
         clickid: this.clickid,
