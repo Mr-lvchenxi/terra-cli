@@ -1,5 +1,5 @@
 <template>
-  <div class="video" :class="commonStyle.className">
+  <div class="video" :class="classTitle">
     <video
       class="replyVideo"
       ref="replyVideo"
@@ -32,7 +32,7 @@
     <div
       class="play_btn"
       v-if="!isFirstIn"
-      :style="{ backgroundImage: `url(${commonStyle.btnBg})` }"
+      :style="{ backgroundImage: `url(${playBtnImg})` }"
       @click.stop="playVideo"
     ></div>
     <!-- 非WIFI begin -->
@@ -74,13 +74,21 @@ export default {
         };
       },
     },
-    isShowNotWifi: {
-      type: Boolean,
-      default: false,
-    },
+    // isShowNotWifi: {
+    //   type: Boolean,
+    //   default: false,
+    // },
     clickId: {
       type: Number,
       default: 1,
+    },
+    playBtnImg: {
+      type: String,
+      default: btnBg,
+    },
+    classTitle: {
+      type: String,
+      default: "",
     },
     commonStyle: {
       type: Object,
@@ -99,8 +107,8 @@ export default {
   },
   data() {
     return {
-      isShowFlag: this.isShowNotWifi,
-      networkType: 1, // 1 wifi 2 移动
+      // isShowFlag: this.isShowNotWifi,
+      // networkType: 1, // 1 wifi 2 移动
       isFirstIn: false, // 是否第一次进入。展示蒙层，播放按钮
       hasSetPointTimer: false, // 是否设置时间节点计时器
       videoDom: null,
@@ -121,7 +129,7 @@ export default {
     },
   },
   mounted() {
-    this.getNetWorkStatus();
+    // this.getNetWorkStatus();
     this.videoDom = this.$refs.replyVideo;
     this.videoDom.addEventListener("loadedmetadata", () => {
       // console.log('on loaded meta data... ...')
@@ -158,16 +166,16 @@ export default {
     /**
      * @description: App获取网络状态
      */
-    getNetWorkStatus() {
-      if (window.xesApp) {
-        this.networkType = window.xesApp.getNetWorkStatus();
-        console.log("当前网络环境为", this.networkType);
-      }
-    },
+    // getNetWorkStatus() {
+    //   if (window.xesApp) {
+    //     this.networkType = window.xesApp.getNetWorkStatus();
+    //     console.log("当前网络环境为", this.networkType);
+    //   }
+    // },
     playVideo() {
-      if (this.networkType === 2 && this.isShowFlag) {
-        return false;
-      }
+      // if (this.networkType === 2 && this.isShowFlag) {
+      //   return false;
+      // }
       this.$refs.replyVideo.play();
       this.$emit("clickMsg", {
         clickid: this.clickid,

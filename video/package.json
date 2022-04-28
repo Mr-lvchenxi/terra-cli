@@ -1,21 +1,21 @@
 {
-  "name": "@k9/video",
-  "nameZH": "希望学视频组件",
-  "version": "1.0.0",
-  "description": "视频相关的组件",
-  "main": "src/install.js",
-  "module": "es/install.js",
-  "scripts": {
-    "build": "terra-cli build --type only",
-    "prepublishOnly": "terra-cli build",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "chenxi.git"
-  },
-  "author": "晨曦",
-  "license": "ISC",
-  "componentType": "UI-vue2",
-  "department": "@k9"
+	"name": "@k9/video",
+	"nameZH": "希望学视频组件",
+	"version": "1.0.1",
+	"description": "视频相关的组件",
+	"main": "lib/install.js",
+	"module": "es/install.js",
+	"scripts": {
+		"build": "terra-cli build --type only",
+		"prepublishOnly": "terra-cli build",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "chenxi.git"
+	},
+	"author": "晨曦",
+	"license": "ISC",
+	"componentType": "UI-vue2",
+	"department": "@k9"
 }
