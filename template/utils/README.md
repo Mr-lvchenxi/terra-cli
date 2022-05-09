@@ -5,6 +5,7 @@ npm i <%=name%> -S
 ```
 
 ## 引入
+
 ```
 import <%=componentName%> from '<%=name%>'
 
@@ -15,11 +16,12 @@ window.<%=componentName%> = <%=componentName%>
 Vue.prototype.$<%=componentName%> = <%=componentName%>
 ```
 
-
 ## API Events
 
-|事件名|说明|回调参数|
-|---|---|---|
+| 事件名 | 说明 | 回调参数 |
+| ------ | ---- | -------- |
+
 
 ## 其他
+
 有问题可知音楼联系：<%=author%>老师
