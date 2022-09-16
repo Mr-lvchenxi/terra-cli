@@ -43,14 +43,14 @@ async function devAction(port) {
     }
   } catch (e) {}
 
-  console.log("aaaaaaaaaaa");
+  // console.log("aaaaaaaaaaa");
   const config = getConfig(componentInfo.type, componentInfo.name);
   // console.log(JSON.stringify(config))
-  config.mode = "development";
+  // config.mode = "development";
   const compiler = webpack(config);
-  console.log("bbbbbbbb");
+  // console.log("bbbbbbbb");
   const server = new webpackDevServer(compiler, options);
-  console.log("cccccccc", server);
+  // console.log("cccccccc", server);
 
   server.listen(port, "localhost", () => {
     console.log(`dev server listening on port ${port}`);

@@ -3,11 +3,13 @@ function loadScript() {
     let oScript = document.createElement("script");
     oScript.type = "text/javascript";
     oScript.src =
-      "https://static-growth-fe.saasp.vdyoo.com/growthFeProject/growthFeSource/growthJsLibrary/talSensor_v2.1.3.js";
+      "https://static-growth-fe.saasp.vdyoo.com/growthFeProject/growthFeSource/growthJsLibrary/talSensor_v2.1.6.js";
     window.onload = function() {
       document.body.appendChild(oScript);
       oScript.onload = function() {
-        resolve(obj);
+        if (window.XesAnalytics) {
+          resolve(window.XesAnalytics);
+        }
       };
       oScript.onerror = function(err) {
         reject(err);
@@ -16,9 +18,9 @@ function loadScript() {
   });
 }
 
-const xesLog = async (obj) => {
-  await loadScript();
-  return new window.XesAnalytics(obj);
+const Xeslog = async (obj) => {
+  let res = await loadScript();
+  return new res(obj);
 };
 
-export default xesLog;
+export default Xeslog;
