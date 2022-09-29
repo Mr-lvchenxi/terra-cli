@@ -6,6 +6,7 @@ console.log("npm测试 link");
 const babelPathWith = (moduleName) =>
   path.resolve(__dirname, "..", "node_modules", "@babel", moduleName);
 
+console.log("babelPathWith---->", babelPathWith);
 require(babelPathWith("register"))({
   plugins: [babelPathWith("plugin-transform-runtime")],
   presets: [babelPathWith("preset-env")],
@@ -13,4 +14,5 @@ require(babelPathWith("register"))({
   ignore: [/terra-cli[\\/]node_modules/],
   cache: false,
 });
+
 module.exports = require("./index");
