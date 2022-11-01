@@ -11,7 +11,7 @@ require(babelPathWith("register"))({
   plugins: [babelPathWith("plugin-transform-runtime")],
   presets: [babelPathWith("preset-env")],
   extensions: [".es6", ".es", ".jsx", ".js", ".mjs"],
-  ignore: [/terra-cli[\\/]node_modules/],
+  ignore: [/luban-cli[\\/]node_modules/],
   cache: false,
 });
 

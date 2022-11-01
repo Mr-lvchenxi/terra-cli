@@ -13,7 +13,7 @@ import {
 async function devAction(port) {
   console.log(
     chalk.red(
-      "terra-cli 版本>1.1.0 （1）旧组件使用请查看升级指南:https://fe.xesv5.com/luban/#/guide"
+      "luban-cli 版本>1.1.0 （1）旧组件使用请查看升级指南:https://fe.xesv5.com/luban/#/guide"
     )
   );
   const options = {

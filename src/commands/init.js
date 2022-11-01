@@ -57,6 +57,7 @@ async function initAction(targetPath = "") {
   // }
 
   const { widgetDir, componentName } = await getWidgetDir(targetPath);
+  console.log("开开心心getWidgetDir", await getWidgetDir(targetPath));
   // const projectInfo = await getProjectInfo(accessToken, componentName);
   // if (projectInfo.id) {
   // 	console.log(chalk.bgRedBright(`当前项目在远端已有相同的项目名称\n git 地址 ${chalk.yellow(projectInfo.http_url_to_repo)}`))
@@ -114,7 +115,7 @@ async function initAction(targetPath = "") {
   console.log(chalk.blue("terra-cli dev"));
   console.log(
     chalk.red(
-      "terra-cli 版本>1.1.0 （1）旧组件使用请查看升级指南:https://fe.xesv5.com/luban/#/guide"
+      "luban-cli 版本>1.1.0 （1）旧组件使用请查看升级指南:https://fe.xesv5.com/luban/#/guide"
     )
   );
 }
